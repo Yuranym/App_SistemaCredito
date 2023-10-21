@@ -2,6 +2,7 @@
 package Creditos;
 
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 
 public class frm_creditos extends javax.swing.JFrame {
 LinkedList<cls_creditos> obj_creditos = new LinkedList<>();
@@ -254,11 +255,9 @@ int int_posicion;
                 txt_nombre.getText(),txt_id.getText(),txt_contacto.getText(),
                 txt_correo.getText(),cbx_plazo.getSelectedIndex(),
                 Float.parseFloat(txt_monto.getText())));
+      JOptionPane.showMessageDialog(null, "Credito registrado" + " con exito", "Registro", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btn_registarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
