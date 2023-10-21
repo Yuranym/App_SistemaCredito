@@ -6,7 +6,7 @@
 package Creditos;
 
 public class cls_creditos {
-    private String str_Tipo;
+    private String str_tipo;
     private String str_nombre;
     private String str_id;
     private String str_contacto;
@@ -18,14 +18,14 @@ public class cls_creditos {
     private float flt_cuota;
     
     public cls_creditos (String tipo, String nombre, String id, String contacto, String correo, int plazo, float monto){
-        this.str_Tipo = tipo;
+        this.str_tipo = tipo;
         this.str_nombre = nombre;
         this.str_contacto = contacto;
         this.str_correo = correo;
         this.int_plazo = plazo;
         this.flt_monto = monto;
         this.str_id = id;
-        if(this.str_Tipo.equals("0")){
+        if(this.str_tipo.equals("0")){
         this.flt_totalInteres = (float)(this.flt_monto * 0.02) * this.int_plazo;//Conversion implicita cuando el resultado sea mas grande de lo que la variable puede sostener (mantener preciso)
         this.flt_totalCredito = this.flt_monto + this.flt_totalInteres;
         this.flt_cuota = this.flt_totalCredito / int_plazo;
@@ -33,11 +33,11 @@ public class cls_creditos {
     }
 
     public String getStr_Tipo() {
-        return str_Tipo;
+        return str_tipo;
     }
 
     public void setStr_Tipo(String str_Tipo) {
-        this.str_Tipo = str_Tipo;
+        this.str_tipo = str_Tipo;
     }
 
     public String getStr_nombre() {
